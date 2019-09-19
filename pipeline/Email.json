@@ -1,0 +1,33 @@
+{
+	"name": "Email",
+	"properties": {
+		"activities": [
+			{
+				"name": "Web1",
+				"type": "WebActivity",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"url": "https://prod-13.northeurope.logic.azure.com:443/workflows/128b8e8f710d42f9bad7bf3b64171cc5/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=6Zx5xEYM95se1bKLe6z1y_QCpq4QkOx9poyR9y03MoU",
+					"method": "POST",
+					"body": {
+						"DataFactoryName": "Test",
+						"PipelineName": "Test",
+						"Subject": "Test",
+						"ErrorMessage": "Failed",
+						"EmailTo": "bhagwat.tadas@altius.co.uk"
+					}
+				}
+			}
+		],
+		"annotations": []
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

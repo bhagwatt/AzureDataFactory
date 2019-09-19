@@ -1,0 +1,24 @@
+{
+	"name": "trigger1",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "ExploreSQLSP_PL",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/test/blobs/2019/01/01/",
+			"blobPathEndsWith": "test.csv",
+			"scope": "/subscriptions/bd52c588-bdf5-416c-850e-ef377495143b/resourceGroups/TRG-Bhagwat-Tadas/providers/Microsoft.Storage/storageAccounts/blobbhagwat",
+			"events": [
+				"Microsoft.Storage.BlobCreated"
+			]
+		}
+	}
+}
